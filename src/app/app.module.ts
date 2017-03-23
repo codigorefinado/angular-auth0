@@ -3,12 +3,17 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, appRoutingProviders } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { Auth } from './services/auth.service';
+import { AUTH_PROVIDERS } from 'angular2-jwt';
+import { AuthGuard } from './auth.guard';
+import { ProfileComponent } from './profile/profile.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, ProfileComponent, HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -16,7 +21,14 @@ import { AppComponent } from './app.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    appRoutingProviders,
+    AUTH_PROVIDERS,
+    Auth,
+    AuthGuard
+  ],
+  bootstrap: [ AppComponent ]
 })
-export class AppModule { }
+export class AppModule {
+}
+
