@@ -13,7 +13,7 @@ import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent, ProfileComponent, HomeComponent
+    AppComponent,  ProfileComponent, HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +22,8 @@ import { HomeComponent } from './home/home.component';
     AppRoutingModule
   ],
   providers: [
-    AUTH_PROVIDERS,
+    // appRoutingProviders,
+    // AUTH_PROVIDERS,
     Auth,
     AuthGuard
   ],
