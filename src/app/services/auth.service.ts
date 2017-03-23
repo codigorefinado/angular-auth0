@@ -9,7 +9,7 @@ declare var Auth0Lock: any;
 @Injectable()
 export class Auth {
   // Configure Auth0
-  lock = new Auth0Lock('IzEMdB5wOaeEkQBZRyAIkUOgWJjrL199', 'netstart.auth0.com', {});
+  lock = new Auth0Lock('IzEMdB5wOaeEkQBZRyAIkUOgWJjrL199', 'netstart.auth0.com', { });
 
   constructor() {
     // Add callback for lock `authenticated` event

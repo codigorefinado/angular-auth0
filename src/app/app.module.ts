@@ -22,7 +22,6 @@ import { HomeComponent } from './home/home.component';
     AppRoutingModule
   ],
   providers: [
-    appRoutingProviders,
     AUTH_PROVIDERS,
     Auth,
     AuthGuard
