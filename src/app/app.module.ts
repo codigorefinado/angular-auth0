@@ -1,19 +1,18 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule, appRoutingProviders } from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { Auth } from './services/auth.service';
-import { AUTH_PROVIDERS } from 'angular2-jwt';
 import { AuthGuard } from './auth.guard';
-import { ProfileComponent } from './profile/profile.component';
 import { HomeComponent } from './home/home.component';
+import { ProfileComponent } from './profile/profile.component';
+import { Auth } from './services/auth.service';
 
 @NgModule({
   declarations: [
-    AppComponent,  ProfileComponent, HomeComponent
+    AppComponent, ProfileComponent, HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +28,6 @@ import { HomeComponent } from './home/home.component';
   ],
   bootstrap: [ AppComponent ]
 })
-export class AppModule {
+export class AppModule{
 }
 

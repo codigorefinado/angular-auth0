@@ -1,21 +1,21 @@
 // app/auth.service.ts
 
-import { Injectable }      from '@angular/core';
+import { Injectable } from '@angular/core';
 import { tokenNotExpired } from 'angular2-jwt';
 
 // Avoid name not found warnings
 declare var Auth0Lock: any;
 
 @Injectable()
-export class Auth {
+export class Auth{
   // Configure Auth0
-  lock = new Auth0Lock('IzEMdB5wOaeEkQBZRyAIkUOgWJjrL199', 'netstart.auth0.com', { });
+  lock = new Auth0Lock('IzEMdB5wOaeEkQBZRyAIkUOgWJjrL199', 'netstart.auth0.com', {});
 
   constructor() {
     // Add callback for lock `authenticated` event
     this.lock.on("authenticated", (authResult: any) => {
-      this.lock.getProfile(authResult.idToken, function (error: any, profile: any) {
-        if (error) {
+      this.lock.getProfile(authResult.idToken, function(error: any, profile: any) {
+        if(error){
           throw new Error(error);
         }
         localStorage.setItem('id_token', authResult.idToken);
