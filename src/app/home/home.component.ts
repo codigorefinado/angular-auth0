@@ -6,7 +6,7 @@ import { Auth } from '../services/auth.service';
   templateUrl: './home.component.html',
   styleUrls: [ './home.component.css' ]
 })
-export class HomeComponent{
+export class HomeComponent {
 
   constructor(private auth: Auth) {
 

@@ -6,7 +6,7 @@ import { Auth } from '../services/auth.service';
   templateUrl: './profile.component.html',
   styleUrls: [ './profile.component.css' ]
 })
-export class ProfileComponent{
+export class ProfileComponent {
   profile: any;
 
   constructor(private auth: Auth) {
